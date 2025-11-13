@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>College Cooking • Tortilla Pizza Event</title>
+
+  <!-- Simple modern fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <title>College Cooking</title>
+  <link rel="icon" href="img/cook_icon.jpg">
+
+  <script>
+    // Prevent theme flicker by applying saved mode before paint
+    (() => {
+      const saved = localStorage.getItem('mode');
+      if (saved === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav" role="banner" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="logo"><img src="img/cook-hero.png" alt="Logo"></span>
+        <div>
+          <h1 style="color: var(--accent);">College Cooking</h1>
+          <p>Quick • Cheap • Delicious</p>
+        </div>
+      </a>
+
+      <nav class="main-nav" role="navigation" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#video">Video</a>
+        <a href="#schedule">Schedule</a>
+        <a href="#register">Register</a>
+      </nav>
+
+      <div class="nav-actions" role="toolbar" aria-label="Theme and actions">
+        <button id="themeToggle" class="btn ghost" aria-pressed="false" title="Toggle dark / light theme">
+          <span id="themeIcon">🌙</span>
+        </button>
+      </div>
+           
+    </div>
+  </header>
+
+  <!-- MAIN CONTAINER -->
+  <main class="container" id="top">
+
+    <!-- HERO / ABOUT -->
+    <div class="card college-cooking">
+        <h1>Welcome to <br> College Cooking</h1>
+        <p class="lead"><i>Looking for a quick, cheap, and delicious meal?</i></p>
+        <br>
+        <button class="btn"><a href="#schedule">Join the Event</a></button>
+    </div>
+    <section class="hero" id="about">
+
+      <div class="card hero-left">
+        <h2>Tortilla Pizza — under $5 & ready in minutes</h2>
+        <p class="lead">A live, hands-on workshop teaching college students how to make a low-cost, healthy tortilla pizza — crispy, melty, and customizable for dorm life.</p>
+
+        <div class="ingredients" aria-hidden="false">
+          <span class="chip">1 Tortilla</span>
+          <span class="chip">Tomato sauce / ketchup</span>
+          <span class="chip">Shredded cheese</span>
+          <span class="chip">Veggie toppings</span>
+          <span class="chip">~300–400 cal</span>
+        </div>
+
+        <p style="margin-top:6px;">
+          <strong>Quick recipe:</strong><br>
+          Looking for a quick, cheap, and delicious meal? In this episode of <em>College Cooking</em>, we’re making a Tortilla Pizza that costs less than $5 and takes only minutes to make! Perfect for busy students, dorm living, or anyone on a budget.
+        </p>
+
+        <ol style="margin:12px 0 0 18px; color:var(--muted)">
+          <li>Lay 1 tortilla flat.</li>
+          <li>Spread tomato sauce (or ketchup) to taste.</li>
+          <li>Add shredded cheese and your favorite toppings.</li>
+          <li>Bake in toaster oven or skillet until cheese melts and edges crisp.</li>
+          <li>Slice & enjoy — fast, affordable, and seriously tasty.</li>
+        </ol>
+
+        <div class="cta-row" style="margin-top:14px;">
+          <button class="btn secondary" ><a href="#signup">Sign Up</a></button>
+          <span class="muted" style="align-self:center">Cost: $5 • Time: ~10 min</span>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Video preview">
+        <div class="video-box">
+          <iframe 
+              id="video"
+              src="https://www.youtube.com/embed/vr2PXTx2D9A" 
+              title="Tortilla Pizza for Under $5"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+          </iframe>
+        </div>
+
+        <div style="margin-top:14px; display:flex; gap:10px; justify-content:center;">
+          <button class="btn" onclick="window.scrollTo({top:document.querySelector('#schedule').offsetTop-80, behavior:'smooth'})">View Schedule</button>
+          <button class="btn secondary" onclick="document.getElementById('signup').scrollIntoView({behavior:'smooth'})">Register</button>
+        </div>
+      </aside>
+    </section>
+
+    <!-- SCHEDULE -->
+    <section class="card schedule" id="schedule" aria-labelledby="schedule-heading">
+      <h1 id="schedule-heading" style="margin:0 0 6px 0; color:var(--accent);">Event Schedule</h1>
+      <p class="muted" style="margin:0 0 16px 0">Join us for a practical, friendly workshop — snacks provided.</p>
+
+      <div class="cards" role="list">
+        <article class="event" role="listitem">
+          <img src="img/cook-img-1.png" alt="Teacher cooking with students">
+          <h4>Welcome & Overview</h4>
+          <div class="time">10:00 AM — 10:20 AM</div>
+          <p>Intro to budget-friendly cooking, safety tips for dorm-kitchens, and quick ingredient swaps.</p>
+        </article>
+
+        <article class="event" role="listitem">
+          <img src="img/cook-img-2.png" alt="Creating Tortilla pizzas">
+          <h4>Hands-On Tortilla Pizza Demo</h4>
+          <div class="time">10:20 AM — 11:00 AM</div>
+          <p>Step-by-step demo, student participation: build, customize, and bake your pizza.</p>
+        </article>
+
+        <article class="event" role="listitem">
+          <img src="img/cook-img-3.png" alt="Tortilla Pizza">
+          <h4>Taste & Q&A + Resources</h4>
+          <div class="time">11:00 AM — 11:30 AM</div>
+          <p>Share your pizza, ask questions, and collect budget-friendly recipe cards and shopping tips.</p>
+        </article>
+      </div>
+    </section>
+<br>
+    <!-- FORM -->
+    <div class="form-rsvp-wrap">
+      <section class="card form-wrap" id="signup" aria-labelledby="signup-heading">
+        <h3 id="signup-heading" style="margin:0 0 6px 0; color:var(--accent);">Sign up to attend</h3>
+        <p class="muted" id="register" style="margin:0 0 12px 0">Register now — we'll confirm your spot via email.</p>
+  
+        <form id="signupForm" novalidate>
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="John Doe" required aria-required="true" />
+            <div class="error-msg" id="nameErr">Please enter your name.</div>
+          </div>
+  
+          <div>
+            <label for="location">Your campus / location</label>
+            <input id="location" name="location" type="text" placeholder="City, State / Campus Name" required />
+            <div class="error-msg" id="locErr">Please enter your location.</div>
+          </div>
+  
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" placeholder="you@school.edu" required />
+            <div class="error-msg" id="emailErr">Please enter a valid email.</div>
+          </div>
+  
+          <div>
+            <label for="diet">Dietary notes (optional)</label>
+            <input id="diet" name="diet" type="text" placeholder="e.g. vegetarian, allergies..." />
+          </div>
+  
+          <div class="full" style="margin-top:6px;">
+            <p class="note">We respect your privacy. We only use your info to confirm attendance.</p>
+            <div class="form-actions">
+              <button type="submit" class="btn">Submit Registration</button>
+              <button type="button" class="btn secondary" onclick="document.getElementById('signupForm').reset()">Reset</button>
+            </div>
+          </div>
+
+        </form>
+      </section>
+    
+      <section class="card" id="rsvpSection">
+        <div class="full">
+          <h3>RSVP LIST</h3>
+        </div>
+        <p class="note" style="margin-top: 20px;">Enter your information to join.</p>
+        <div id="rsvpList"></div>
+      </section>
+    </div>
+    
+
+    <!-- FOOTER -->
+    <footer>
+      <div>
+        <p style="font-weight:700; margin-bottom:6px;">College Cooking • Tortilla Pizza Event</p>
+        <p class="muted">Practical, budget-friendly recipes for students.</p>
+      </div>
+
+      <div style="text-align:right;">
+        <p style="margin:0 0 6px 0">Recipes & inspiration from:</p>
+        <p><a href="https://www.goya.com/en/creation/chili-recipes/?gad_source=1&gad_campaignid=23036156558&gbraid=0AAAAApOP_x97-EkKSpSutCxDjLk2OiJoo&gclid=CjwKCAiA8bvIBhBJEiwAu5ayrIFdbTGis73XaBOx1bDFn82KFsBLT4c-UyKpZG53qOEMSrOtwkxATBoC_ywQAvD_BwE" target="_blank" rel="noopener noreferrer">Goya • Chili & recipe collection</a></p>
+        <p class="muted" style="margin-top:8px;">© <span id="year"></span> College Cooking</p>
+      </div>
+    </footer>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
