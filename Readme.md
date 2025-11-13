@@ -66,7 +66,7 @@ CodePath/
 
 ## 🧑‍💻 Author
 
-**Your Name**  
+Julio Torres 
 📧 [jtorres090906@gmail.com] 
 🔗 [https://linkedin.com/in/julio-torres-408004276](#) • [https://github.com/jtorso](#)
 
