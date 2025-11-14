@@ -5,8 +5,7 @@
 ---
 
 ## 🌐 Live Demo
-[👉 View Project on GitHub Pages](#)  
-*(Add your GitHub Pages or Netlify link here once deployed)*
+[👉 https://codepath-seven.vercel.app/](#)  
 
 ---
 
