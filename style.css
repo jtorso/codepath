@@ -466,7 +466,7 @@
     }
 
     .success { 
-      /* background: linear-gradient(90deg,#a3f7c7,#d7ffd9);  */
+      background: linear-gradient(90deg,#a3f7c7,#d7ffd9);
       background-color: #a3f7c7;
       padding:10px 12px; 
       border-radius:10px; 
@@ -515,7 +515,73 @@
       box-shadow: 0 3px 10px rgba(255,255,255,0.08);
     }
 
+    /* Modal */
+    .modal {
+      display: none; /* stays hidden until JS shows it */
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+      backdrop-filter: blur(4px);
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+    }
+    
+    .modal-container {
+      background: linear-gradient(
+        180deg,
+        color-mix(in srgb, var(--background) 95%, transparent),
+        var(--glass)
+      );
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid rgba(0,0,0,0.04);
+      text-align: center;
+      max-width: 600px;
+      animation: popIn 0.35s ease-out;
+    }
+    
+    .modal-item {
+      flex: 1;
+    }
 
+    #modal-text {
+      white-space: pre-line;
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+
+    #modal-img {
+      width: 150px;
+      height: auto;
+      animation: sideToSide 1s infinite;
+    }
+
+    @keyframes sideToSide {
+      0% { 
+        transform: translateX(-15px); 
+      }
+      50% { 
+        transform: translateX(15px);
+      }
+      100% { 
+        transform: translateX(-15px); 
+      }
+    }
+    
+    @keyframes popIn {
+      0% {
+        transform: scale(0.85);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+    
+    
     /* Footer */
     footer {
       margin-top: 46px;

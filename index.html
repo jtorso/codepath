@@ -174,10 +174,11 @@
           <div class="full" style="margin-top:6px;">
             <p class="note">We respect your privacy. We only use your info to confirm attendance.</p>
             <div class="form-actions">
-              <button type="submit" class="btn">Submit Registration</button>
+              <button type="submit" id="submit-btn" class="btn">Submit Registration</button>
               <button type="button" class="btn secondary" onclick="document.getElementById('signupForm').reset()">Reset</button>
             </div>
           </div>
+
 
         </form>
       </section>
@@ -190,6 +191,24 @@
         <div id="rsvpList"></div>
       </section>
     </div>
+
+    <!-- SUCCESS MODAL (starts hidden!) -->
+    <div id="success-modal" class="modal">
+
+      <div class="modal-container">
+          <div class="modal-item">
+            <p id="modal-text">
+            </p>
+          </div>
+
+          <div class="modal-item">
+            <img id="modal-img" src="img/cook-hero.png" alt="Success">
+          </div>
+      </div>
+
+    </div>
+
+  
     
 
     <!-- FOOTER -->

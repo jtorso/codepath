@@ -40,6 +40,8 @@
 CodePath/
 │
 ├── index.html
+├── style.css
+├── script.js
 │── cook-img-1.png
 │── cook-img-2.png
 │── cook-img-3.png
@@ -47,7 +49,6 @@ CodePath/
 │ ├── cook-hero.png
 │ └── cook_icon.jpg
 └── README.md
-
 
 
 ---
